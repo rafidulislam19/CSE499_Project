@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 const globalReducer = createSlice({
   name: "global",
   initialState: {
     success: "",
+    searchBar: false,
   },
   reducers: {
     setSuccess: (state, action) => {
@@ -13,8 +13,11 @@ const globalReducer = createSlice({
     clearMessage: (state) => {
       state.success = "";
     },
+    toggleSearchBar: (state) => {
+      state.searchBar = !state.searchBar;
+    },
   },
 });
-
-export const { setSuccess, clearMessage } = globalReducer.actions;
+export const { setSuccess, clearMessage, toggleSearchBar } =
+  globalReducer.actions;
 export default globalReducer.reducer;
