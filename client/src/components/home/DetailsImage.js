@@ -10,4 +10,4 @@ const DetailsImage = ({ image }) => {
   );
 };
 
-export default DetailsImage;
+export default DetailsImage; 

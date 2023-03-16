@@ -1,4 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import currency from "currency-formatter";
 import { BsTrash } from "react-icons/bs";
 import { motion } from "framer-motion";
@@ -10,6 +12,8 @@ import {
   decQuantity,
   removeItem,
 } from "../../store/reducers/cartReducer";
+
+import { useSendPaymentMutation } from "../../store/services/paymentService";
 
 const Cart = () => {
   const { cart, total } = useSelector((state) => state.cartReducer);
@@ -28,6 +32,22 @@ const Cart = () => {
     }
   };
 
+  const navigate = useNavigate();
+  const [doPayment, response] = useSendPaymentMutation();
+  console.log("payment response", response);
+  const pay = () => {
+    if (userToken) {
+      doPayment({ cart, id: user.id });
+    } else {
+      navigate("/login");
+    }
+  };
+
+  useEffect(() => {
+    if (response?.isSuccess) {
+      window.location.href = response?.data?.url;
+    }
+  }, [response]);
   console.log(user);
 
   return (
@@ -117,8 +137,11 @@ const Cart = () => {
                 <span className="text-lg font-semibold text-indigo-800 mr-10">
                   {currency.format(total, { code: "BDT" })}
                 </span>
-                <button className="btn bg-indigo-600 text-sm font-medium py-2.5">
-                  checkout
+                <button
+                  className="btn bg-indigo-600 text-sm font-medium py-2.5"
+                  onClick={pay}
+                >
+                  {response.isLoading ? "Loading..." : "checkout"}
                 </button>
               </div>
             </div>
