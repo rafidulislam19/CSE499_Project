@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FcSearch } from "react-icons/fc";
+import { FiSearch } from "react-icons/fi";
 import { TiShoppingCart } from "react-icons/ti";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
@@ -18,15 +18,15 @@ const Nav = () => {
           <div className="flex justify-between items-center">
             <Link to="/">
               <img
-                src="/logo.svg"
-                className="object-cover pt-2 w-32 h-32"
+                src="/logo1.svg"
+                className="object-cover pt-2 w-24 h-24"
                 alt="logo"
               />
             </Link>
             <ul className="flex items-center">
               <li className="nav-li cursor-pointer">
-                <FcSearch
-                  size={28}
+                <FiSearch
+                  size={26}
                   onClick={() => dispatch(toggleSearchBar())}
                 />
               </li>

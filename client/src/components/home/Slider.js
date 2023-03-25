@@ -28,15 +28,15 @@ const Slider = () => {
                 alt=""
               />
             </div>
-            <div className="absolute inset-0 w-full h-full bg-black/50">
-              <div className="my-container h-[80vh] flex flex-col items-center justify-center">
-                <h1 className="text-white text-xl font-medium capitalize">
+            <div className="absolute inset-0 w-full h-full bg-black/40">
+              <div className="my-container h-[45vh] flex flex-col items-center justify-center">
+                <h1 className="text-white text-lg font-medium capitalize">
                   {cat.name}
                 </h1>
-                <div className="mt-10">
+                <div className="mt-4">
                   <Link
                     to={`/cat-products/${cat.name}`}
-                    className="btn btn-indigo text-base"
+                    className="btn btn-banner text-base"
                   >
                     browse collections
                   </Link>

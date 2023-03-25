@@ -10,18 +10,20 @@ const Home = () => {
   return (
     <>
       <Nav />
-      <div className="mt-[70px]">
+      <div className="my-container mt-20">
+        <Categories />
+      </div>
+      <div className="mt-[15px]">
         <Slider />
       </div>
-      <div className="my-container mt-10">
-        <Categories />
+      <div className="my-container mt-8">
         {!isFetching &&
           data?.categories?.length > 0 &&
           data?.categories.map((category) => (
             <HomeProduct category={category} key={category._id} />
           ))}
       </div>
-      <div className="mt-10">
+      <div className="mt-6">
         <Footer />
       </div>
     </>

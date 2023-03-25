@@ -6,7 +6,7 @@ import Skeleton from "../skeleton/Skeleton";
 import Thumbnail from "../skeleton/Thumbnail";
 const Categories = () => {
   const { data, isFetching } = useAllCategoriesQuery();
-  let i = 1;
+  let i = 0;
   return isFetching ? (
     <div className="flex flex-wrap -mx-4 mb-10">
       {[1, 2, 3, 4, 5, 6].map((item) => (
@@ -15,7 +15,7 @@ const Categories = () => {
           key={item}
         >
           <Skeleton>
-            <Thumbnail height="150px" />
+            <Thumbnail height="70px" />
           </Skeleton>
         </div>
       ))}
@@ -24,10 +24,10 @@ const Categories = () => {
     data?.categories.length > 0 && (
       <Swiper
         modules={[Virtual]}
-        spaceBetween={20}
-        slidesPerView={3}
+        spaceBetween={35}
+        slidesPerView={8}
         virtual
-        className="w-full h-[150px] mb-10"
+        className="w-full h-[70px] "
         breakpoints={{
           0: {
             slidesPerView: 2,
@@ -47,20 +47,20 @@ const Categories = () => {
         }}
       >
         {data.categories.map((category, index) => {
-          if (i >= 5) {
+          if (i >= 15) {
             i = 1;
           } else {
             i++;
           }
           return (
             <SwiperSlide
-              className="w-full overflow-hidden  rounded-lg relative"
+              className="w-full overflow-hidden rounded-lg relative"
               key={index}
               virtualIndex={index}
             >
-              <div className="w-full h-[150px] rounded-lg overflow-hidden">
+              <div className="w-full h-[100px] rounded-lg overflow-hidden">
                 <img
-                  src={`./images/slider/${i}.jpg`}
+                  src={`./images/slider/${i}.png`}
                   className="w-full h-full object-cover"
                   alt=""
                 />

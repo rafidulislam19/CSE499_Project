@@ -1,15 +1,15 @@
 .nav {
-    @apply bg-white w-full h-[90px] flex items-center shadow-sm z-50 fixed top-0 right-0 left-0;
+  @apply bg-gray-800 w-full h-[70px] flex items-center shadow-md z-10 fixed top-0 right-0 left-0 mb-0;
 }
 
 .nav-li {
-    @apply ml-8;
+  @apply ml-8 text-white;
 }
 
 .nav-link {
-    @apply text-lg font-medium text-black capitalize ;
+  @apply text-base flex justify-center items-center text-gray-800 text-center font-medium capitalize bg-white px-8 py-1 rounded-md;
 }
 
 .nav-circle {
-    @apply flex items-center justify-center w-[22px] h-[22px] rounded-full bg-indigo-600 text-xs text-white font-medium absolute -top-2 -right-3;
+  @apply flex items-center justify-center w-[22px] h-[22px] rounded-full bg-indigo-600 text-xs text-white font-medium absolute -top-2 -right-3;
 }

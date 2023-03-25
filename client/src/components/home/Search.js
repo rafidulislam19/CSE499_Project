@@ -5,7 +5,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { toggleSearchBar } from "../../store/reducers/globalReducer";
 const Search = () => {
-  const navgiate = useNavigate();
+  const navigate = useNavigate();
   const [state, setState] = useState("");
   const { searchBar } = useSelector((state) => state.globalReducer);
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const Search = () => {
     if (state === "") {
       return;
     }
-    navgiate(`/search-products/${state}/1`);
+    navigate(`/search-products/${state}/1`);
     dispatch(toggleSearchBar());
   };
   return (
