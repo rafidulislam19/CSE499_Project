@@ -8,6 +8,9 @@
 .btn-indigo {
   @apply bg-gray-800 text-white capitalize font-medium px-4 py-3 rounded-md cursor-pointer !important;
 }
+.btn-indigo-admin {
+  @apply bg-indigo-600 text-white capitalize font-medium px-4 py-3 rounded-md cursor-pointer !important;
+}
 .btn-banner {
   @apply bg-white text-gray-800 capitalize font-medium px-4 py-3 rounded-md cursor-pointer !important;
 }

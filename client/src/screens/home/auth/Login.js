@@ -104,7 +104,9 @@ const Login = () => {
                 <p>
                   Don't have an account ?{" "}
                   <span className="capitalize font-medium text-base text-black">
-                    <Link to="/register">register</Link>
+                    <Link to="/register" className="underline ">
+                      register
+                    </Link>
                   </span>
                 </p>
               </div>

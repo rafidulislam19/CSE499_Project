@@ -52,7 +52,7 @@ const Register = () => {
               onSubmit={onSubmit}
               className="bg-white rounded-lg -mt-12 border border-gray-200 p-10"
             >
-              <h1 className="heading mb-5">sign up</h1>
+              <h1 className="heading mb-5 ">sign up</h1>
               <div className="mb-4">
                 <label htmlFor="name" className="form-label">
                   name
@@ -126,9 +126,11 @@ const Register = () => {
               </div>
               <div>
                 <p>
-                  Already have an account ?{" "}
+                  Already have an account ?{"  "}
                   <span className="capitalize font-medium text-base text-black">
-                    <Link to="/login">sign in</Link>
+                    <Link to="/login" className="underline">
+                      sign in
+                    </Link>
                   </span>
                 </p>
               </div>

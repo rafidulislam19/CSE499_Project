@@ -51,7 +51,7 @@ const CreateCategory = () => {
           <input
             type={"submit"}
             value={data.isLoading ? "loading..." : "create category"}
-            className="btn-indigo"
+            className="btn-indigo-admin"
           />
         </div>
       </form>

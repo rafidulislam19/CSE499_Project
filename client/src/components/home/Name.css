@@ -1,0 +1,26 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(221, 240, 219);
+}
+
+.sidebar {
+  position: relative;
+  height: 336px;
+  width: 250px;
+  padding-left: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #202020;
+  color: whitesmoke;
+}
+.scrollBox {
+  height: 100%;
+  overflow: auto;
+  padding-right: 10px;
+}
+.scrollBox-inner p {
+  font-size: 16px;
+}

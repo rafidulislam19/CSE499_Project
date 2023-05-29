@@ -12,7 +12,7 @@ import {
   decQuantity,
   removeItem,
 } from "../../store/reducers/cartReducer";
-
+import { Link } from "react-router-dom";
 import { useSendPaymentMutation } from "../../store/services/paymentService";
 
 const Cart = () => {
@@ -31,10 +31,10 @@ const Cart = () => {
       dispatch(removeItem(id));
     }
   };
-
   const navigate = useNavigate();
   const [doPayment, response] = useSendPaymentMutation();
   console.log("payment response", response);
+  console.log(user);
   const pay = () => {
     if (userToken) {
       doPayment({ cart, id: user.id });
@@ -42,13 +42,11 @@ const Cart = () => {
       navigate("/login");
     }
   };
-
   useEffect(() => {
     if (response?.isSuccess) {
       window.location.href = response?.data?.url;
     }
   }, [response]);
-  console.log(user);
 
   return (
     <>

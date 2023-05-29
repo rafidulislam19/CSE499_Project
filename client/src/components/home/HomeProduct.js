@@ -13,10 +13,10 @@ const HomeProduct = ({ category }) => {
     data?.products?.length > 0 && (
       <>
         <div className="flex justify-between">
-          <span className="text-lg font-medium capitalize">
+          <span className="text-xl font-semibold capitalize">
             {category.name}
           </span>
-          <span className="capitalize">
+          <span className="capitalize text-lg font-medium underline">
             <Link to={`/cat-products/${category.name}`}>see all</Link>
           </span>
         </div>

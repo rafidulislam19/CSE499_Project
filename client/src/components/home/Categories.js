@@ -1,9 +1,10 @@
-import { Virtual } from "swiper";
+import { Virtual, Autoplay } from "swiper";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useAllCategoriesQuery } from "../../store/services/categoryService";
 import Skeleton from "../skeleton/Skeleton";
 import Thumbnail from "../skeleton/Thumbnail";
+import "swiper/css/autoplay";
 const Categories = () => {
   const { data, isFetching } = useAllCategoriesQuery();
   let i = 0;
@@ -23,7 +24,8 @@ const Categories = () => {
   ) : (
     data?.categories.length > 0 && (
       <Swiper
-        modules={[Virtual]}
+        modules={[Virtual, Autoplay]}
+        autoplay={{ delay: 1500 }}
         spaceBetween={35}
         slidesPerView={8}
         virtual
@@ -65,7 +67,7 @@ const Categories = () => {
                   alt=""
                 />
               </div>
-              <div className="absolute inset-0 w-full h-full bg-black/50 flex items-center justify-center p-4">
+              <div className="absolute inset-0 w-full h-full bg-black/60 flex items-center justify-center p-4">
                 <Link
                   to={`/cat-products/${category.name}`}
                   className="text-white text-base font-medium capitalize"

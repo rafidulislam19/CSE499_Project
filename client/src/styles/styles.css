@@ -48,7 +48,7 @@
 }
 
 .account-list-title {
-  @apply block ml-3 font-medium text-sm text-gray-700 capitalize;
+  @apply block ml-3 font-medium text-xl text-gray-800 capitalize;
 }
 
 a.active {

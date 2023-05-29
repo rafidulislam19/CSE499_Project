@@ -8,18 +8,18 @@ const AccountList = () => {
   return (
     <>
       <NavLink to="/user" className="account-list">
-        <BsPersonCircle size={22} />
+        <BsPersonCircle size={25} />
         <span className="account-list-title">my account</span>
       </NavLink>
       <NavLink to="/orders" className="account-list">
-        <AiOutlineShoppingCart size={22} />
+        <AiOutlineShoppingCart size={25} />
         <span className="account-list-title">orders</span>
       </NavLink>
       <span
         className="account-list cursor-pointer"
         onClick={() => dispatch(logout("userToken"))}
       >
-        <AiOutlineLogout size={22} />
+        <AiOutlineLogout size={25} />
         <span className="account-list-title">logout</span>
       </span>
     </>

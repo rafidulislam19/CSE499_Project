@@ -104,7 +104,7 @@ const EditProduct = () => {
     <Wrapper>
       <ScreenHeader>
         <Link to="/dashboard/products" className="btn-dark">
-          <i className="bi bi-arrow-left-short"></i> proudcts list
+          <i className="bi bi-arrow-left-short"></i> products list
         </Link>
       </ScreenHeader>
       <Toaster position="top-right" reverseOrder={true} />
@@ -239,7 +239,7 @@ const EditProduct = () => {
                   type="submit"
                   value={response.isLoading ? "loading..." : "save product"}
                   disabled={response.isLoading ? true : false}
-                  className="btn btn-indigo"
+                  className="btn-indigo-admin"
                 />
               </div>
             </div>

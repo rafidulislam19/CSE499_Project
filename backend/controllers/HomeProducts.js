@@ -2,7 +2,7 @@ const ProductModel = require("../models/ProductModel");
 class HomeProducts {
   async catProducts(req, res) {
     const { name, page, keyword } = req.params;
-    const perPage = 4;
+    const perPage = 8;
     const skip = (page - 1) * perPage;
     const options = name
       ? { category: name }
@@ -20,6 +20,7 @@ class HomeProducts {
           .gt(0)
           .skip(skip)
           .limit(perPage)
+          .populate("reviews")
           .sort({ updatedAt: -1 });
         return res.status(200).json({ products: response, perPage, count });
       } catch (error) {
@@ -30,6 +31,7 @@ class HomeProducts {
         .where("stock")
         .gt(0)
         .limit(4)
+        .populate("reviews")
         .sort({ updatedAt: -1 });
       return res.status(200).json({ products: response });
     }

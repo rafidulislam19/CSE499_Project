@@ -15,7 +15,7 @@ class Category {
       } else {
         return res
           .status(401)
-          .json({ errors: [{ msg: `${name} category already exists` }] });
+          .json({ errors: [{ msg: `${name} category already exists!` }] });
       }
     } else {
       return res.status(401).json({ errors: errors.array() });
@@ -94,8 +94,8 @@ class Category {
     try {
       const categories = await CategoryModel.aggregate([
         {
-          $sample: { size: 3 },
-        }, 
+          $sample: { size: 4 },
+        },
       ]);
       return res.status(200).json({ categories });
     } catch (error) {
