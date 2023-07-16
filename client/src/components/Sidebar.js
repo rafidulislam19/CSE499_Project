@@ -16,13 +16,13 @@ const Sidebar = ({ side, closeSidebar }) => {
         <img src="/logo1.svg" alt="logo" />
       </div>
       <ul className="mt-10">
-        <li className="px-10 py-3 cursor-pointer transition-all text-white flex items-center">
+        <li className="px-10 py-3 cursor-pointer transition-all text-white flex items-center hover:bg-gray-600">
           <i className="bi bi-card-list mr-2 ml-6 inline-block text-2xl"></i>{" "}
           <Link to="/dashboard/products" className="text-xl capitalize">
             products
           </Link>
         </li>
-        <li className="px-10 py-3 cursor-pointer transition-all text-white flex items-center">
+        <li className="px-10 py-3 cursor-pointer transition-all text-white flex items-center hover:bg-gray-600">
           <i className="bi bi-bag-check mr-2 ml-6 inline-block text-2xl"></i>{" "}
           <Link to="/dashboard/orders" className="text-xl capitalize">
             orders
@@ -34,7 +34,7 @@ const Sidebar = ({ side, closeSidebar }) => {
             customers
           </Link>
         </li> */}
-        <li className="px-10 py-3 cursor-pointer transition-all text-white flex items-center">
+        <li className="px-10 py-3 cursor-pointer transition-all text-white flex items-center hover:bg-gray-600">
           <i className="bi bi-bar-chart mr-2 ml-6 inline-block text-2xl"></i>{" "}
           <Link to="/dashboard/categories" className="text-xl capitalize">
             categories

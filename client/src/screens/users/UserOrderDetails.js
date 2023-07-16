@@ -95,7 +95,7 @@ const UserOrderDetails = () => {
                           className="btn-indigo rounded !py-2 !text-sm"
                           onClick={() => toggleReview()}
                         >
-                          add reivew
+                          add review
                         </button>
                       </div>
                     )}

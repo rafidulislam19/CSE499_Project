@@ -113,7 +113,7 @@ const UserOrders = () => {
                     />
                   </>
                 ) : (
-                  <div className="bg-rose-50 border border-rose-100 rounded px-4 py-2.5 capitalize text-rose-800 text-base font-semibold">
+                  <div className="bg-rose-50 border border-rose-100 rounded px-4 py-2.5 capitalize text-rose-800 text-lg font-medium">
                     no orders!
                   </div>
                 )

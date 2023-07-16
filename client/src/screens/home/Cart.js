@@ -145,7 +145,7 @@ const Cart = () => {
             </div>
           </>
         ) : (
-          <div className="bg-indigo-50 border border-indigo-100 p-4 rounded-md text-sm font-medium text-indigo-800">
+          <div className="bg-rose-50 border border-rose-100 p-4 rounded-md text-lg font-medium text-rose-800">
             Cart is empty!
           </div>
         )}
